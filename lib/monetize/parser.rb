@@ -48,7 +48,7 @@ module Monetize
 
       multiplier_exp, input = extract_multiplier
 
-      num = input.gsub(/(?:^#{currency.symbol}|[^\d.,'-]+)/, '')
+      num = input.gsub(/(?:^#{currency.symbol}|[^\d.,'-\(\)]+)/, '')
 
       negative, num = extract_sign(num)
 
